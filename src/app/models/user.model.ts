@@ -4,4 +4,6 @@ export interface User {
     fullname: string;
     email: string;
     contactno: string;
+    provinceid: number,
+    municipalityid: number
 }

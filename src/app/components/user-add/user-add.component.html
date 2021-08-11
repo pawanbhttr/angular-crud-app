@@ -21,6 +21,20 @@
                         <input type="text" class="form-control" [(ngModel)]="user.fullname" id="fullname"
                             name="fullname" />
                     </div>
+                    <div class="col-md-6">
+                        <label>Province</label>
+                        <select class="form-control" [(ngModel)]="user.provinceid" id="provinceid" name="provinceid" (change)="onProvinceChange($event)">
+                            <option value="">-- Select --</option>
+                            <option *ngFor="let province of provinces" value="{{ province.id }}">{{ province.name }}</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label>Municipality</label>
+                        <select class="form-control" [(ngModel)]="user.municipalityid" id="municipalityid" name="municipalityid">
+                            <option value="">-- Select --</option>
+                            <option *ngFor="let municipality of municipalities" value="{{ municipality.id }}">{{ municipality.name }}</option>
+                        </select>
+                    </div>
                     <div class="col-12">
                         <label>Email</label>
                         <input type="text" class="form-control" [(ngModel)]="user.email" id="email" name="email" />

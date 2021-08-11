@@ -1,7 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { User } from '../../models/user.model';
+import { Province } from '../../models/province.model';
+import { Municipality } from '../../models/municipality.model';
 import { UserService } from '../../services/user.service';
+import { ProvinceService } from '../../services/province.service';
+import { MunicipalityService } from '../../services/municipality.service';
 
 @Component({
   selector: 'app-user-edit',
@@ -15,15 +19,41 @@ export class UserEditComponent implements OnInit {
     username: "",
     fullname: "",
     email: "",
-    contactno: ""
+    contactno: "",
+    provinceid: 0,
+    municipalityid: 0
   };
 
   submitted: boolean = false;
 
-  constructor(private userService: UserService, private route: ActivatedRoute, private router: Router) { }
+  provinces: Province[] = [];
+  municipalities: Municipality[] = [];
+
+  constructor(
+    private userService: UserService,
+    private provinceService: ProvinceService,
+    private municipalityService: MunicipalityService,
+    private route: ActivatedRoute
+  ) { }
 
   ngOnInit(): void {
     this.getUseInfo(this.route.snapshot.params.id);
+    this.getProvinces();
+  }
+
+  getProvinces(): void {
+    this.provinceService.getAll()
+      .subscribe(data => {
+        this.provinces = data;
+      });
+  }
+
+  onProvinceChange(event: any): void {
+    let provinceId = Number(event.target.value);
+    this.municipalityService.getAll()
+      .subscribe(data => {
+        this.municipalities = data.filter(x => x.provinceid == provinceId);
+      });
   }
 
   getUseInfo(id: number): void {

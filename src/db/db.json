@@ -1,0 +1,145 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "pawan1",
+      "fullname": "Pawan Bhattarai",
+      "email": "pawan1@gmail.com",
+      "contactno": "9806011111",
+      "provinceid": 0,
+      "municipalityid": 0
+    },
+    {
+      "id": 2,
+      "username": "pawan2",
+      "fullname": "Pawan Bhattarai",
+      "email": "pawan2@gmail.com",
+      "contactno": "9806011112",
+      "provinceid": 0,
+      "municipalityid": 0
+    },
+    {
+      "id": 3,
+      "username": "pawan3",
+      "fullname": "Pawan Bhattarai",
+      "email": "pawan3@gmail.com",
+      "contactno": "9806011113",
+      "provinceid": 0,
+      "municipalityid": 0
+    },
+    {
+      "id": 4,
+      "username": "pawan4",
+      "fullname": "Pawan Bhattarai",
+      "email": "pawan4@gmail.com",
+      "contactno": "9806011114",
+      "provinceid": 0,
+      "municipalityid": 0
+    },
+    {
+      "id": 5,
+      "username": "pawan5",
+      "fullname": "Pawan Bhattarai",
+      "email": "pawan5@gmail.com",
+      "contactno": "9806011115",
+      "provinceid": 0,
+      "municipalityid": 0
+    },
+    {
+      "id": 6,
+      "username": "pawan6",
+      "fullname": "Pawan Bhattarai",
+      "email": "pawan6@gmail.com",
+      "contactno": "9806011116",
+      "provinceid": 0,
+      "municipalityid": 0
+    },
+    {
+      "id": 7,
+      "username": "pawan7",
+      "fullname": "Pawan Bhattarai",
+      "email": "pawan7@gmail.com",
+      "contactno": "9806011117",
+      "provinceid": 0,
+      "municipalityid": 0
+    },
+    {
+      "id": 8,
+      "username": "manojph",
+      "fullname": "Manoj Phaju",
+      "email": "manojph@gmail.com",
+      "contactno": "9856321470",
+      "provinceid": "3",
+      "municipalityid": "1"
+    }
+  ],
+  "provinces": [
+    {
+      "id": 1,
+      "name": "Province 1",
+      "capital": "Biratnagar"
+    },
+    {
+      "id": 2,
+      "name": "Province 2",
+      "capital": "Janakpur"
+    },
+    {
+      "id": 3,
+      "name": "Bagmati",
+      "capital": "Hetauda"
+    },
+    {
+      "id": 4,
+      "name": "Gandaki Province",
+      "capital": "Pokhara"
+    },
+    {
+      "id": 5,
+      "name": "Lumbini Province",
+      "capital": "Deukhuri"
+    },
+    {
+      "id": 6,
+      "name": "Karnali Province",
+      "capital": "Birendranagar"
+    },
+    {
+      "id": 7,
+      "name": "Sudurpashchim Province",
+      "capital": "Godawari"
+    }
+  ],
+  "municipalities": [
+    {
+      "id": 1,
+      "name": "Bhaktapur Municipality",
+      "provinceid": 3
+    },
+    {
+      "id": 2,
+      "name": "Shivasatakshi Municipality",
+      "provinceid": 1
+    },
+    {
+      "id": 3,
+      "name": "Damak Municipality",
+      "provinceid": 1
+    },
+    {
+      "id": 4,
+      "name": "Kathmandu Metropolitan City",
+      "provinceid": 3
+    },
+    {
+      "id": 5,
+      "name": "Lalitpur Metropolitan City",
+      "provinceid": 3
+    },
+    {
+      "id": 6,
+      "name": "Suryabinayak Municipality",
+      "provinceid": 3
+    }
+  ]
+}
