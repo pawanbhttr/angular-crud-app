@@ -1,0 +1,38 @@
+<div class="row my-3">
+    <div class="col-12 text-right">
+        <a class="btn btn-outline-primary btn-sm" routerLink="/users/add">Add</a>
+    </div>
+</div>
+<div class="card">
+    <div class="card-header">
+        User List
+    </div>
+    <div class="card-body">
+        <table class="table table-bordered table-striped table-condensed">
+            <thead>
+                <tr>
+                    <th>SN</th>
+                    <th>Username</th>
+                    <th>Fullname</th>
+                    <th>Email</th>
+                    <th>Contact No</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of Users; let i = index;">
+                    <td>{{ i + 1 }}</td>
+                    <td>{{ user.username }}</td>
+                    <td>{{ user.fullname }}</td>
+                    <td>{{ user.email }}</td>
+                    <td>{{ user.contactno }}</td>
+                    <td>
+                        <a class="btn btn-outline-info btn-sm" routerLink="/users/edit/{{ user.id }}">Edit</a>&nbsp;
+                        <button class="btn btn-outline-danger btn-sm" type="button"
+                            (click)="onDeleteClick(user.id)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

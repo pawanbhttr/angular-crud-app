@@ -1,0 +1,47 @@
+<div class="row my-3">
+    <div class="col-12 text-right">
+        <a class="btn btn-outline-primary btn-sm" routerLink="/users">List</a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-6">
+        <div class="card" *ngIf="!submitted">
+            <div class="card-header">
+                Add New User
+            </div>
+            <div class="card-body">
+                <form class="row g-3" #userform="ngForm" (ngSubmit)="addUser()">
+                    <div class="col-md-6">
+                        <label>Username</label>
+                        <input type="text" class="form-control" [(ngModel)]="user.username" id="username"
+                            name="username" />
+                    </div>
+                    <div class="col-md-6">
+                        <label>Fullname</label>
+                        <input type="text" class="form-control" [(ngModel)]="user.fullname" id="fullname"
+                            name="fullname" />
+                    </div>
+                    <div class="col-12">
+                        <label>Email</label>
+                        <input type="text" class="form-control" [(ngModel)]="user.email" id="email" name="email" />
+                    </div>
+                    <div class="col-12">
+                        <label>Contact No.</label>
+                        <input type="text" class="form-control" [(ngModel)]="user.contactno" id="contactno"
+                            name="contactno" />
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-outline-primary">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row my-3" *ngIf="submitted">
+    <div class="col-12">
+        <h4>User saved successfully!</h4>
+        <button class="btn btn-outline-primary btn-sm" type="button" (click)="newUser()">Add</button>
+    </div>
+</div>
